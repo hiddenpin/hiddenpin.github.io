@@ -1,3 +1,1 @@
-<!-- <img src="forkliftfail.gif" /> -->
-<!-- <img src="t.jpg" /> -->
-hi
+<img src="5179/forkliftfail.gif" />
