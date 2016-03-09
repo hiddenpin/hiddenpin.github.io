@@ -29,12 +29,15 @@
 					if (ajaxRequest.readyState == 4 && ajaxRequest.status == 200){
 						document.getElementById("reward").innerHTML = ajaxRequest.responseText;
 					}
+					else if (ajaxRequest.readyState == 4 && ajaxRequest.status != 200) {
+						document.getElementById("reward").innerHTML = "Nothing for " + pin;
+					}
 				}
 				ajaxRequest.open("GET", pin + "/result.txt", true);
 				ajaxRequest.send(); 
 			}
 			catch (e) {
-				document.getElementById("reward").innerHTML = "Nothing for " + pin;
+				document.getElementById("reward").innerHTML = "Nothing (also something went wrong)";
 			}
 			finally {
 				document.getElementById('pintext').value = "";
